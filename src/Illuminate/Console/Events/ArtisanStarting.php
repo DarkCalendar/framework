@@ -2,6 +2,8 @@
 
 namespace Illuminate\Console\Events;
 
+use \Illuminate\Console\Application;
+
 class ArtisanStarting
 {
     /**
@@ -13,12 +15,9 @@ class ArtisanStarting
 
     /**
      * Create a new event instance.
-     *
-     * @param  \Illuminate\Console\Application  $artisan
-     * @return void
      */
-    public function __construct($artisan)
+    public function __construct(public Application $artisan): void
     {
-        $this->artisan = $artisan;
+        // do soomting
     }
 }
